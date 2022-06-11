@@ -1,0 +1,473 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* html {
+    font-family: TTCommons-Regular, sans-serif;
+    text-size-adjust: 100%;
+    font-size: 330px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: rgb(255, 255, 255);
+    
+} */
+
+body{
+    margin: 0px;
+    padding: 0;
+    min-width: 400px;
+}
+
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+
+.background{
+    overflow: hidden;
+    /* position: fixed; */
+    height: 800px;
+    width: 100%;
+    max-width: 100%;
+    background-image: url("../img/BackGorundFFDS.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+header{
+    /* position: fixed; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 20px;
+    background: transparent;
+    color:  white;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 5px 0px;
+    backdrop-filter: blur(30px);
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+
+.logo{
+    margin: 0 10%;
+    width: 100px;
+    cursor: pointer;
+   
+}
+
+
+.navTitle{
+    font-size: 40px;
+    
+}
+
+
+.nav-links{
+    list-style: none;
+    padding: 28px 0;
+    
+}
+
+
+.nav-links li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+
+.nav-links li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 0;
+    position: relative;
+}
+
+
+.nav-links li a::after{
+    content: '';
+    background:rgb(255, 0, 0);
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+
+.contactButton {
+    margin: 0 30px;
+    font-size: 18px;
+    color: rgb(57, 13, 13);
+    padding: 10px 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+
+.contactButton:hover{
+    background-color: rgb(243, 120, 120);
+}
+
+
+.signIN{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.signInBtn{
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 5px 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 20px 100px;
+    background-color: rgb(163, 130, 13);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+
+.signInBtn:hover{
+    background-color: rgb(84, 89, 7);
+}
+
+
+.sliding{
+    min-width: 400px;
+    width: 100%;
+    z-index: -1;
+    height: 50px;	
+    overflow: hidden;
+    position: absolute ;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px;
+}
+
+
+.sliding p {
+    display: flex;
+    font-style: italic;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-right 150s linear infinite none;
+}
+
+
+.informatizacija h1{
+    font-size: 40px;
+    text-align: center;
+
+}
+
+
+.informatizacija button{
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 5px 0px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 20px 40px;
+    background-color: rgb(163, 130, 13);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+
+.informatizacija button:hover{
+    background-color: rgb(84, 89, 7);
+}
+
+
+.infButtons{
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+.informatizacija{
+    align-items: center;
+    padding: 6% 8%;
+}
+
+
+.line{
+    margin-top: 50px;
+}
+
+.imgNews{
+    width: 100%;
+    height: 100%;
+}
+
+.news h1{
+    margin: 50px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.boxNews h2{
+    text-transform: uppercase;
+    padding: 0 3%;
+}
+
+
+.boxNews{
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.imgDivNews{
+    width: 20%;
+    margin-left: 10px;
+    margin-right: 20px;
+    display: flex;
+    
+}
+.h2DivNews{
+    width: 20%;
+    margin-right: 50px;
+    display: flex;
+}
+.pDivNews{
+    width: 60%;
+    background-color:rgb(255, 236, 236);
+    padding: 3%;
+    display: flex;
+}
+
+
+
+.form{
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+
+.unos input{    
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: rgb(251, 254, 236);
+        color: rgb(165, 164, 164);
+        
+        width: 400px;
+        height: 40px;
+}
+
+
+.botun button{ 
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 5px 0px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 15px 50px;
+    background-color: rgb(163, 130, 13);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+
+.botun button:hover{
+    background-color: rgb(84, 89, 7);
+}
+
+
+.map{
+    width: 100%;
+    height: 70vh;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+iframe{
+    width: 95%;
+
+}
+
+
+footer{
+    background-color: rgb(163, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+
+.footDiv h3{
+    font-size: 30px;
+}
+
+
+.footDiv p{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.footDiv{
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    color: white;
+}
+
+
+@keyframes scroll-right {
+    100%   {
+    transform: translateX(100%); 		
+    }
+    0% {
+    transform: translateX(-100%); 
+    }
+}
+
+
+@media screen and (max-width: 1110px){
+    .navTitle{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 925px){
+    .signInBtn{
+        padding: 20px 50px;
+    }
+    .infButtons{
+        height: 150px;
+        text-align: center;
+        justify-content: space-between;
+        display: block;
+    }
+    .infButtons div{
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 720px){
+    .background{
+        height: 650px;
+    }
+
+    .signInBtn{
+        padding: 20px 30px;
+    }
+
+    header{
+        padding:0;
+        justify-content: center; 
+    }
+
+    .logo{
+        display: none;
+    }
+    .line{
+        margin-top: 100px;
+    }
+
+
+    .boxNews h2{
+        text-transform: uppercase;
+        padding: 0 3%;
+    }
+    .boxNews{
+        display: block ;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgb(240, 240, 240);
+        padding: 2%;
+        justify-content: space-between;
+      
+
+    }
+    .imgDivNews{
+        min-width: 300px;
+        max-width: 400px;
+        margin: auto;
+        width: 100%;
+        display: block;
+        
+    }
+
+    .h2DivNews{
+        min-width: 300px;
+        max-width: 400px;
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+
+    .pDivNews{
+        min-width: 300px;
+        margin: auto ;
+        
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 520px){
+    .signInBtn{
+        padding: 20px 20px;
+        font-size: 15px;
+        margin: 10%;
+    }
+
+    .unos input{    
+        width: 300px;
+    }
+}
+
